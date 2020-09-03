@@ -1,21 +1,23 @@
 package io.saumya.controller;
 
+import java.util.Collections;
+import java.util.List;
+
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import io.saumya.model.CatalogItem;
+
+@RestController
+@RequestMapping("/movieCatalog")
 public class Controller {
 	
-	public void getAllEmployee() {
-		
+	@RequestMapping("/{userId}")
+	public List<CatalogItem> getMovieCatalog(@PathVariable("userId") String userId){
+		return Collections.singletonList(
+				new CatalogItem("name:Titanic","Desc:Romantic",5)
+				);
 	}
-	public void singleEmployee() {
-		
-	}
-	public void updateEmployee() {
-		
-	}
-	public void deleteEmployee() {
-		
-	}
-
-	public void  function1 () {
-		System.out.println("saumya panda");
-	}
+	
 }
