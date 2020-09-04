@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,11 +19,14 @@ import io.saumya.model.UserRating;
 @RequestMapping("/movieCatalog")
 public class Controller {
 	
+	@Autowired
+	private RestTemplate restTemplate;
+	
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getMovieCatalog(@PathVariable("userId") String userId){
 		
 		//for now we hard coded the UserRatingAPI inside our controller
-		RestTemplate restTemplate = new RestTemplate();
+		//RestTemplate restTemplate = new RestTemplate();
 		//Movie movie=restTemplate.getForObject("localhost:8082/movies/matrix", Movie.class);
 		//step-1  get all rated movieId
 			/*For now i am going to hardcode the rating and movieId from Uer-API
