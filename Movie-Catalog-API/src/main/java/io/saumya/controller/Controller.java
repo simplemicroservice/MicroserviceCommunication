@@ -21,6 +21,7 @@ public class Controller {
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getMovieCatalog(@PathVariable("userId") String userId){
 		
+		//for now we hard coded the UserRatingAPI inside our controller
 		RestTemplate restTemplate = new RestTemplate();
 		//Movie movie=restTemplate.getForObject("localhost:8082/movies/matrix", Movie.class);
 		//step-1  get all rated movieId
