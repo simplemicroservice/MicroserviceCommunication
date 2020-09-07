@@ -27,7 +27,7 @@ public class Controller {
 	private WebClient.Builder webClientBuilder;
 	
 	@RequestMapping("/{userId}")
-	//this method getMovieCatalog returning a list of movie with userRating according to UserId
+	
 	public List<CatalogItem> getMovieCatalog(@PathVariable("userId") String userId){
 		
 		//WebClient.Builder builder =WebClient.builder();
