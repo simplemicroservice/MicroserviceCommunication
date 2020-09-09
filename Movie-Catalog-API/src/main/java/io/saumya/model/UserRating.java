@@ -12,7 +12,7 @@ public class UserRating {
 		this.rating = rating;
 	}
 	public UserRating() {
-		super();
+		
 	}
 	public String getMovieId() {
 		return movieId;

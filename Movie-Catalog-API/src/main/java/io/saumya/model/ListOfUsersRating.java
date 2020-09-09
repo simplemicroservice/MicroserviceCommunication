@@ -8,6 +8,11 @@ import java.util.List;
 public class ListOfUsersRating {
 
 	private List<UserRating> listUserRating;
+	
+
+	public ListOfUsersRating() {
+	
+	}
 
 	public List<UserRating> getListUserRating() {
 		return listUserRating;
