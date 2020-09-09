@@ -12,6 +12,6 @@ public class MovieController {
 
 	@RequestMapping("/{movieId}")
 	public Movie getMovieInfo(@PathVariable("movieId") String movieId) {
-		return new Movie(movieId,"TestName");
+		return new Movie(movieId,"Transformer","Action Movie");
 	}
 }
